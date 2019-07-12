@@ -12,6 +12,7 @@ btn.addEventListener('click',()=>{
 
     findtxt = new RegExp(findtxt, 'g');
     tagtxt = tagtxt.replace(findtxt, reptxt);
-
+    // 実際にテキストを置換している部分
+    
     result.innerText = tagtxt;
 });
