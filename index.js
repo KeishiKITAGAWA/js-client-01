@@ -1,18 +1,142 @@
 // ここにJavaScriptコードを書く
-const tarea = document.getElementById('tarea');
-const input1 = document.getElementById('input1');
-const input2 = document.getElementById('input2');
+const input = document.getElementById('input');
 const btn = document.getElementById('btn');
 const result = document.getElementById('result');
 
 btn.addEventListener('click',()=>{
-    let findtxt = input1.value;
-    let reptxt = input2.value;
-    let tagtxt = tarea.value;
+    let yourText = input.value;
+    result.innerText = toGalMoji(yourText);
+}); 
 
-    findtxt = new RegExp(findtxt, 'g');
-    tagtxt = tagtxt.replace(findtxt, reptxt);
-    // 実際にテキストを置換している部分
-    
-    result.innerText = tagtxt;
-});
+
+
+function toGalMoji(org_text){
+    str = "";
+    for(i=0;i<org_text.length; i++){
+        c = org_text.charAt(i);
+        str += c;
+str = str.replace("─","ー")
+str = str.replace("あ","ぁ")
+str = str.replace("い","ﾚヽ")
+str = str.replace("う","ぅ")
+str = str.replace("え","ぇ")
+str = str.replace("お","ぉ")
+str = str.replace("か","カゝ")
+str = str.replace("が","カヾ")
+str = str.replace("き","､ｷ ")
+str = str.replace("ぎ","､ｷ″")
+str = str.replace("く","＜")
+str = str.replace("ぐ","＜″")
+str = str.replace("け","ﾚﾅ")
+str = str.replace("げ","ﾚﾅ″")
+str = str.replace("さ","､ﾅ ")
+str = str.replace("ざ","､ﾅ″")
+str = str.replace("し","ι")
+str = str.replace("じ","ι″")
+str = str.replace("た","ﾅﾆ")
+str = str.replace("だ","ﾅﾆ″")
+str = str.replace("つ","⊃")
+str = str.replace("づ","⊃″")
+str = str.replace("て","乙")
+str = str.replace("で","乙″")
+str = str.replace("と","ー⊂")
+str = str.replace("ど","ー⊂″")
+str = str.replace("な","ﾅょ")
+str = str.replace("に","ﾚﾆ")
+str = str.replace("び","ひ″")
+str = str.replace("ぴ","ひ°")
+str = str.replace("ふ","ιうゝ")
+str = str.replace("ぶ","ιうゝ″")
+str = str.replace("ぷ","ιうゝ°")
+str = str.replace("へ","人")
+str = str.replace("べ","人″")
+str = str.replace("ぺ","人°")
+str = str.replace("ほ","ﾚま")
+str = str.replace("ぼ","ﾚま″")
+str = str.replace("ぽ","ﾚま°")
+str = str.replace("や","ゃ")
+str = str.replace("ゆ","ゅ")
+str = str.replace("よ","ょ")
+str = str.replace("わ","ゎ")
+str = str.replace("は","ﾚょ")
+str = str.replace("ば","ﾚょ″")
+str = str.replace("ぱ","ﾚょ°")
+str = str.replace("り","丶)")
+str = str.replace("ろ","３")
+str = str.replace("ん","/～")
+
+str = str.replace("ア","ｧ")
+str = str.replace("イ","ｨ")
+str = str.replace("ウ","ｩ")
+str = str.replace("ヴ","ｩ″")
+str = str.replace("エ","工")
+str = str.replace("オ","才")
+str = str.replace("キ","≠")
+str = str.replace("ギ","≠″")
+str = str.replace("ク","ｸ")
+str = str.replace("グ","ｸ″")
+str = str.replace("ケ","ｹ")
+str = str.replace("ゲ","ｹ″")
+str = str.replace("コ","］")
+str = str.replace("ゴ","］″")
+str = str.replace("サ","廾")
+str = str.replace("ザ","廾″")
+str = str.replace("シ","=/")
+str = str.replace("ジ","=/″")
+str = str.replace("ス","ｽ")
+str = str.replace("ズ","ｽ″")
+str = str.replace("セ","ｾ")
+str = str.replace("ソ","｀／")
+str = str.replace("ゾ","｀／″")
+str = str.replace("タ","夕")
+str = str.replace("ダ","夕″")
+str = str.replace("チ","千")
+str = str.replace("ヂ","千″")
+str = str.replace("ツ","”/")
+str = str.replace("ヅ","”/″")
+str = str.replace("テ","〒")
+str = str.replace("デ","〒″")
+str = str.replace("ト","├")
+str = str.replace("ド","├″")
+str = str.replace("ナ","ﾅ")
+str = str.replace("ニ","二")
+str = str.replace("ヌ","ﾇ")
+str = str.replace("ネ","ﾈ")
+str = str.replace("ノ","／")
+str = str.replace("ハ","ﾉヽ")
+str = str.replace("バ","ﾉヾ")
+str = str.replace("パ","ﾉヽ°")
+str = str.replace("ヒ","ｔ")
+str = str.replace("ビ","ｔ″")
+str = str.replace("ピ","ｔ°")
+str = str.replace("フ","＞")
+str = str.replace("ブ","＞″")
+str = str.replace("プ","＞。")
+str = str.replace("ヘ","人")
+str = str.replace("ベ","人″")
+str = str.replace("ペ","人°")
+str = str.replace("ホ","ﾎ")
+str = str.replace("ボ","ﾎ″")
+str = str.replace("ポ","ﾎ°")
+str = str.replace("マ","ﾏ")
+str = str.replace("ミ","彡")
+str = str.replace("ム","厶")
+str = str.replace("メ","乂")
+str = str.replace("モ","ﾓ")
+str = str.replace("ヤ","ﾔ")
+str = str.replace("ャ","ｬ")
+str = str.replace("ユ","ﾕ")
+str = str.replace("ュ","ｭ")
+str = str.replace("ヨ","∋")
+str = str.replace("ョ","ｮ")
+str = str.replace("ラ","ﾗ")
+str = str.replace("リ","└|")
+str = str.replace("ル","｣ﾚ")
+str = str.replace("レ","∠")
+str = str.replace("ロ","□")
+str = str.replace("ワ","ﾜ")
+str = str.replace("ヲ","ｦ")
+str = str.replace("ン","~丿")
+    }
+    return str;
+}
